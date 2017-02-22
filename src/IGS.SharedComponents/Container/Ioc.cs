@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using StructureMap;
 
 namespace IGS.SharedComponents.Container
@@ -58,6 +59,22 @@ namespace IGS.SharedComponents.Container
 
 			applicationContainer = container;
 			profileContainer = applicationContainer.GetProfile(ExtensionProfileName);
+		}
+
+		/// <summary>
+		/// Check the validity of the StructureMap container
+		/// </summary>
+		public static void AssertConfigurationIsValid()
+		{
+			using (var container = ApplicaitonContainer.GetNestedContainer())
+			{
+				if (Debugger.IsAttached)
+				{
+					Trace.WriteLine(container.WhatDoIHave());
+				}	
+
+				container.AssertConfigurationIsValid();
+			}
 		}
 	}
 }

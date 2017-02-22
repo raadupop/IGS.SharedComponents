@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="Container\DefaultRegistry.cs" />
     <Compile Include="Container\Ioc.cs" />
+    <Compile Include="Container\CustomTypePluginConvention.cs" />
     <Compile Include="Container\StructureMapExtenstions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="IGS.SharedComponents.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
