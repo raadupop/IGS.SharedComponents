@@ -15,13 +15,13 @@ namespace IGS.SharedComponents.Container
 		private const string ExtensionsBinPath = "bin\\ext";
 		private const string ExtenstionsDirName = "ext";
 
-		public static void IgsAssamblies(this IAssemblyScanner scanner)
+		public static void IgsAssemblies(this IAssemblyScanner scanner)
 		{
 			scanner.AssembliesAndExecutablesFromApplicationBaseDirectory(IsIgsAssembly);
 		}
 
 		/// <summary>
-		/// Check if is a valid IGS assembly 
+		/// Check if is a valid IGS assembly
 		/// </summary>
 		/// <param name="assembly">The assembly to verify</param>
 		/// <returns>True if is a valid assembly</returns>
@@ -50,7 +50,7 @@ namespace IGS.SharedComponents.Container
 		{
 			var extensionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ExtensionsBinPath);
 
-			// based on the build configuration (Debug/Release), we end up with bin/ext or bin/<config>/ext 
+			// based on the build configuration (Debug/Release), we end up with bin/ext or bin/<config>/ext
 			if (!Directory.Exists(extensionDir))
 			{
 				extensionDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, ExtenstionsDirName);
@@ -64,7 +64,7 @@ namespace IGS.SharedComponents.Container
 				// scanner.With(new FindExtensibleRegistryInstancesScanner());
 			}
 		}
-		
+
 		/// <summary>
 		/// Scans for implementers or inheritors of T and registers them
 		/// </summary>

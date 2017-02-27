@@ -4,7 +4,7 @@ using StructureMap.Graph;
 namespace IGS.SharedComponents.Container
 {
 	/// <summary>
-	/// The default StructureMap registry which will scan all of the IGS assemblies and load all <see cref="Registry"/>s found within those assemblies. 
+	/// The default StructureMap registry which will scan all of the IGS assemblies and load all <see cref="Registry"/>s found within those assemblies.
 	/// </summary>
 	public sealed class DefaultRegistry : Registry
 	{
@@ -24,7 +24,7 @@ namespace IGS.SharedComponents.Container
 		/// <param name="scanner">The <see cref="IAssemblyScanner"/></param>
 		private static void OnScan(IAssemblyScanner scanner)
 		{
-			scanner.IgsAssamblies();
+			scanner.IgsAssemblies();
 			scanner.LookForRegistries();
 		}
 	}
