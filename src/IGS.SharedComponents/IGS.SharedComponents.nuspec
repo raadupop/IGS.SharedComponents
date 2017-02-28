@@ -9,7 +9,6 @@
     <iconUrl>https://raw.githubusercontent.com/raadupop/IGS.SharedComponents/master/IGS.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Containing core IGS objects and functionality.</description>
-		<releaseNotes>$releaseNotes$</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>IGS</tags>
 		<dependencies>
