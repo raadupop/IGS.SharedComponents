@@ -5,7 +5,7 @@ using StructureMap;
 namespace IGS.SharedComponents.Container
 {
 	/// <summary>
-	/// Mechanism for bootstrap structure map
+	/// Mechanism for bootstrap StructureMap
 	/// </summary>
 	public static class Ioc
 	{
