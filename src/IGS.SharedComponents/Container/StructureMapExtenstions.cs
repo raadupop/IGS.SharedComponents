@@ -15,6 +15,10 @@ namespace IGS.SharedComponents.Container
 		private const string ExtensionsBinPath = "bin\\ext";
 		private const string ExtenstionsDirName = "ext";
 
+		/// <summary>
+		/// Scan for all of the IGS assemblies into the base directory
+		/// </summary>
+		/// <param name="scanner"></param>
 		public static void IgsAssemblies(this IAssemblyScanner scanner)
 		{
 			scanner.AssembliesAndExecutablesFromApplicationBaseDirectory(IsIgsAssembly);

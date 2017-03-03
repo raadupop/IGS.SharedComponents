@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 <package >
-  <metadata>
-    <id>$id$</id>
-    <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <iconUrl>https://raw.githubusercontent.com/raadupop/IGS.SharedComponents/master/IGS.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Containing core IGS objects and functionality.</description>
-    <copyright>Copyright 2017</copyright>
-    <tags>IGS</tags>
-  </metadata>
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<title>$title$</title>
+		<authors>$author$</authors>
+		<owners>$author$</owners>
+		<iconUrl>https://raw.githubusercontent.com/raadupop/IGS.SharedComponents/master/IGS.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Containing core IGS objects and functionality.</description>
+		<copyright>Copyright 2017</copyright>
+		<releaseNotes>$releaseNotes$</releaseNotes>
+		<tags>IGS</tags>
+	</metadata>
 	<files>
-		<file src="bin\$configuration$\$id$.pdb" target="lib\net40\" />
+		<file src="bin\$configuration$\$id$.*" target="lib\net40\" />
 	</files>
-
 </package>
