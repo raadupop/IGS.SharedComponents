@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using StructureMap;
 
 namespace IGS.SharedComponents.Container
@@ -75,6 +76,18 @@ namespace IGS.SharedComponents.Container
 
 				container.AssertConfigurationIsValid();
 			}
+		}
+
+		/// <summary>
+		/// Create a new <see cref="IContainer"/>.  This container will be a nested container of the root container.  All instances created in 
+		/// this container will be disposed when the container is disposed.  This method is only used when you need to ensure you never enroll 
+		/// into an existing container.  In all other cases use <see cref="ContainerScope"/>
+		/// </summary>
+		/// <returns>A new IGS Container</returns>
+		[SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1616:ElementReturnValueDocumentationMustHaveText", Justification = "Reviewed. Suppression is OK here.")]
+		public static IContainer GetDisposableContainer()
+		{
+			return ApplicaitonContainer.GetNestedContainer();
 		}
 	}
 }
